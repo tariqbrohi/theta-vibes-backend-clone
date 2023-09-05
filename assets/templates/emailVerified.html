@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Theta Vibes</title>
+    <style>
+      * {
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #ffff;
+        margin: 0px;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-color: #131314;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .logo {
+        width: 400px;
+        margin-bottom: 70px;
+        border-radius: 50%;
+      }
+      h3 {
+        color: #ffff;
+      }
+      button {
+        outline: none;
+        background-color: #ffc629;
+        padding: 20px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #ffff;
+      }
+    </style>
+  </head>
+  <body style="background-color: powderblue">
+    <script>
+      function redirect() {
+        const {
+          NODE_ENV,
+          REACT_APP_LOCAL_URL,
+          REACT_APP_PROD_URL,
+          REACT_APP_DEV_URL,
+        } = process.env;
+
+        if (NODE_ENV === "development") {
+          window.location.href = REACT_APP_DEV_URL + "/login";
+        } else if (NODE_ENV === "production") {
+          window.location.href = REACT_APP_PROD_URL + "/login";
+        } else {
+          window.location.href = REACT_APP_LOCAL_URL + "/login";
+        }
+      }
+    </script>
+
+    <div class="container">
+      <img
+        class="logo"
+        src="https://res.cloudinary.com/dpffbkle1/image/upload/v1691386195/thetavibeslogo_d9hz6c.png"
+      />
+      <h3>Your email has been verified. Thank you!</h3>
+      <button id="loginBtn" onclick="redirect()">Click here to Login</button>
+    </div>
+  </body>
+</html>

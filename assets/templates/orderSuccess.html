@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      h2,
+      h4 {
+        text-align: center;
+        margin: 1rem;
+      }
+      p {
+        margin: 1rem;
+      }
+      .wrappper {
+        width: 80%;
+        margin: 0 auto;
+      }
+      .line {
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+        margin: 1rem 0;
+      }
+
+      .products {
+        margin: 1rem;
+      }
+      .name-wrapper {
+        display: flex;
+        align-items: center;
+        margin: 1rem;
+      }
+      .name {
+        margin-left: 10px;
+        text-transform: capitalize;
+      }
+      .title {
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Theta Vibes</h2>
+    <h4>Order Confimation</h4>
+    <div class="wrappper">
+      <div class="name-wrapper">
+        Hey,
+        <h3 class="name">$name,</h3>
+      </div>
+
+      <p>We've received your order and will be shipping it to you shortly.</p>
+      <p>
+        Your order id is:
+        <span class="title"> $orderId.</span>
+      </p>
+
+      <p class="title">Products Order</p>
+      <div class="line"></div>
+
+      <div class="products">$products</div>
+      <div class="line"></div>
+
+      <p><span class="title">Shipping Address:</span> $shippingAddress</p>
+      <p><span class="title">Billing Address:</span> $billingAddress</p>
+      <div class="line"></div>
+      <p><span class="title">Total:</span> $amount $</p>
+      <p><span class="title">Shipping Fee:</span> $shippingFee $</p>
+      <p><span class="title">Total Amount:</span> $totalAmount $</p>
+
+      <p><span class="title">Receipet:</span> $receiptUrl</p>
+      <p>Thank you for your order!</p>
+    </div>
+  </body>
+</html>
