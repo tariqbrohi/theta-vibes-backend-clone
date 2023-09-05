@@ -1,0 +1,33 @@
+{
+  "name": "theta-vibes-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tariqbrohi/theta-vibes-backend.git",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "migrateUp": "npx sequelize-cli db:migrate",
+    "migrateDown": "npx sequelize-cli db:migrate:undo",
+    "seedUp": "npx sequelize-cli db:seed:all",
+    "seedDown": "npx sequelize-cli db:seed:undo"
+  },
+  "author": "",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "globalpayments-api": "^1.4.8",
+    "joi": "^17.8.3",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.1.2",
+    "nodemailer": "^6.9.1",
+    "nodemon": "^2.0.21",
+    "sequelize": "^6.28.0",
+    "sequelize-cli": "^6.6.1",
+    "sqlite3": "^5.1.4",
+    "stripe": "^11.15.0"
+  }
+}
